@@ -1,0 +1,47 @@
+﻿@page
+@model App.Pages.Author.IndexModel
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Authors</h2>
+        </div>
+        <div class="col-6">
+             
+        </div>
+    </div>
+
+    <br /><br />
+
+    <table class="table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    LastName
+                </th>
+                <th>
+                    NickName
+                </th>
+                <th>
+                    Birthday
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var obj in Model.Authors)
+            {
+                <tr>
+                    <td width="25">@obj.First_name</td>
+                    <td width="25">@obj.Last_name</td>
+                    <td width="25">@obj.NickName</td>
+                    <td width="25">@obj.Birthday</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>
